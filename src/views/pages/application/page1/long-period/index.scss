@@ -1,0 +1,13 @@
+
+.effective-days {
+  .van-cell__value {
+    color: inherit;
+  }
+}
+
+.has-pay-amount {
+  .active {
+    color: $color-info;
+    margin: 0 2px;
+  }
+}

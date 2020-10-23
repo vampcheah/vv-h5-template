@@ -1,0 +1,182 @@
+// 主题专属设置，这里的一切设定将会覆盖所有的 css
+// 如果是固定或初始化主题并且不想要被改变的，建议在 theme-base.scss 里面处理
+.theme-#{$theme-name} {
+
+  #app {
+    background-color: $theme-bg-color;
+  }
+
+  .circle-icon {
+    background: $theme-bg-color;
+    border: 1px solid $theme-text-active-color;
+    padding:5px;
+    border-radius: 50%;
+  }
+
+  // navbar
+  .van-nav-bar {
+    background-color: $theme-bg-color;
+
+    &__title {
+      color: $theme-text-color;
+    }
+
+    &__text {
+      color: $theme-text-color;
+    }
+
+    &__left {
+      i {
+        color: $theme-text-active-color;
+      }
+      .van-nav-bar__arrow {
+        color: $theme-text-color;
+      }
+    }
+
+    &__right {
+      i {
+        color: $theme-text-active-color;
+      }
+      .van-nav-bar__arrow {
+        color: $theme-text-color;
+      }
+    }
+
+  }
+
+  // tabbar
+  .van-tabbar {
+    background-color: $theme-bg-container-color;
+    border: none !important;
+    border-style: none !important;
+    border-top: none !important;
+
+
+    .van-tabbar-item {
+      color: $theme-text-color;
+    }
+
+    .van-tabbar-item--active {
+      background-color: $theme-bg-container-color;
+
+      .van-tabbar-item__icon,
+      .van-tabbar-item__text {
+        color: $theme-text-active-color;
+      }
+    }
+  }
+
+  .van-tabbar::after {
+    border-color: #4a4a4a;
+  }
+
+  // tabs
+  .van-tabs {
+    .van-tab{
+      background-color: $theme-bg-container-color;
+
+      &.van-tab--active{
+         .van-tab__text {
+           color: $theme-text-active-color;
+         }
+      }
+
+      &__text {
+        color: $theme-text-color;
+      }
+    }
+  }
+
+  // notice bar
+  .van-notice-bar {
+    background-color: $theme-bg-color;
+  }
+
+  // van-card
+  .van-card {
+    background-color: $theme-bg-container-color;
+    color: $theme-text-color;
+
+    .van-card__price {
+      color: $theme-text-color;
+    }
+  }
+
+  // form
+  .van-form {
+    background-color: $theme-bg-container-color;
+  }
+
+  // row
+  // .van-row {
+  //   background-color: $theme-bg-container-color;
+  // }
+
+  // grid
+  .van-grid {
+    background-color: $theme-bg-container-color;
+    padding: 12px 12px 12px 12px;
+
+    .van-grid-item {
+      .van-grid-item__content {
+        background-color: transparent;
+        color: $theme-text-color;
+      }
+    }
+  }
+
+  // dropdown
+  .van-dropdown-menu {
+    &__bar {
+      background-color: $theme-bg-container-color;
+    }
+
+    &__title {
+      color: $theme-text-color;
+    }
+
+    &__title:focus {
+      color: $theme-text-color;
+    }
+
+    .van-cell--clickable {
+      background-color: $theme-bg-container-color;      
+    }
+  }
+
+
+  // cell
+  .van-cell-group {
+    background-color: $theme-bg-container-color;
+    color: $theme-text-color;
+  }
+
+  .van-cell {
+    background-color: $theme-bg-container-color;
+    color: $theme-text-color;
+  }
+
+  // action sheet
+  .van-action-sheet .content {
+    padding: 16px 16px 260px;
+  }
+
+  // 限制大荧幕时候出现手机的大小
+  @media screen and (min-width: 980px) {
+    #app {
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    .footer-button,
+    .van-tabbar--fixed,
+    .van-nav-bar--fixed,
+    .van-action-sheet{
+      width: 500px;
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+}

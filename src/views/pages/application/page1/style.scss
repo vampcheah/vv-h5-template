@@ -1,0 +1,23 @@
+.interval {
+  height: 10px;
+}
+
+.long-hint {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  .van-tag {
+    margin-left: 4px;
+  }
+}
+
+.open-floor {
+  height: 50px;
+}
+
+.please-agree-user-agreement {
+  padding: 8px 16px;
+  .active {
+    color: $color-info;
+  }
+}

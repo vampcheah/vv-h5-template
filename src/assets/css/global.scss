@@ -1,0 +1,74 @@
+// mixin等内容
+// 会导致变化类型，或者调节型的 css
+// 非 class 型 css
+@import '~@/assets/css/unit/variables.scss';
+
+// 工具类名统一前缀
+$prefix: vv;
+
+// 禁止用户选中 鼠标变为手形
+%unable-select {
+  user-select: none;
+  cursor: pointer;
+}
+
+// 填满父元素
+// 组要父元素 position: relative | absolute;
+%full {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+// flex 垂直水平居中
+%flex-center-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+%flex-center-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+// mixin
+// 清除浮动
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// 多行隐藏
+@mixin textoverflow($clamp:1) {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $clamp;
+  /*! autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+
+//flex box
+@mixin flexbox($jc:space-between, $ai:center, $fd:row, $fw:nowrap) {
+  display: flex;
+  display: -webkit-flex;
+  flex: 1;
+  justify-content: $jc;
+  -webkit-justify-content: $jc;
+  align-items: $ai;
+  -webkit-align-items: $ai;
+  flex-direction: $fd;
+  -webkit-flex-direction: $fd;
+  flex-wrap: $fw;
+  -webkit-flex-wrap: $fw;
+}

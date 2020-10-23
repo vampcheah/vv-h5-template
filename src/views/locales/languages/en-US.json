@@ -1,0 +1,14 @@
+{
+	"_element": "en-US",
+	"_name": "English",
+	"menu": {
+		"unknown": "Unknown"
+	},
+	"theme": {
+		"t-day": "Day Mode",
+		"t-night": "Night Mode"
+	},
+	"sample": {
+		"text": "Test Vue-i18n"
+	}
+}

@@ -1,0 +1,74 @@
+/**
+/// 启动和初始化公用 css class
+/// 建议使用 class 类型
+/// 非 class 类型，请在指定页面里面的 scss 进行特殊处理
+/// UI 的 css 设置在 themes/theme-base.scss
+**/
+@import 'global';
+// 文字相关
+.#{$prefix}-text-center {
+  text-align: center;
+}
+
+// 浮动相关
+.#{$prefix}-fl {
+  float: left;
+}
+.#{$prefix}-fr {
+  float: right;
+}
+
+// 边距相关
+$sizes: (0, 5, 10, 15, 20);
+
+@for $index from 1 to 6 {
+  .#{$prefix}-m-#{nth($sizes, $index)} { margin: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-mt-#{nth($sizes, $index)} { margin-top: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-mr-#{nth($sizes, $index)} { margin-right: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-mb-#{nth($sizes, $index)} { margin-bottom: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-ml-#{nth($sizes, $index)} { margin-left: #{nth($sizes, $index)}px !important; }
+}
+
+// 快速使用
+@for $mSize from 3 through 20 {
+  .#{$prefix}-m-#{$mSize} { margin: #{$mSize}px !important; }
+}
+@for $mSize from 3 through 60 {
+  .#{$prefix}-mt-#{$mSize} { margin-top: #{$mSize}px !important; }
+}
+@for $mSize from 3 through 20 {
+  .#{$prefix}-mr-#{$mSize} { margin-right: #{$mSize}px !important; }
+}
+@for $mSize from 3 through 60 {
+  .#{$prefix}-mb-#{$mSize} { margin-bottom: #{$mSize}px !important; }
+}
+@for $mSize from 3 through 20 {
+  .#{$prefix}-ml-#{$mSize} { margin-left: #{$mSize}px !important; }
+}
+
+@for $pSize from 3 through 20 {
+  .#{$prefix}-p-#{$pSize} { padding: #{$pSize}px !important; }
+}
+@for $pSize from 3 through 20 {
+  .#{$prefix}-pt-#{$pSize} { padding-top: #{$pSize}px !important; }
+}
+@for $pSize from 3 through 20 {
+  .#{$prefix}-pr-#{$pSize} { padding-right: #{$pSize}px !important; }
+}
+@for $pSize from 3 through 20 {
+  .#{$prefix}-pb-#{$pSize} { padding-bottom: #{$pSize}px !important; }
+}
+@for $pSize from 3 through 20 {
+  .#{$prefix}-pl-#{$pSize} { padding-left: #{$pSize}px !important; }
+}
+
+.#{$prefix}-m { margin: 20px !important; }
+.#{$prefix}-mt { margin-top: 20px !important; }
+.#{$prefix}-mr { margin-right: 20px !important; }
+.#{$prefix}-mb { margin-bottom: 20px !important; }
+.#{$prefix}-ml { margin-left: 20px !important; }
+
+// 字体大小
+@for $fsize from 5 to 20 {
+  .#{$prefix}-fs-#{$fsize} { font-size: #{$fsize}pt !important; }
+}

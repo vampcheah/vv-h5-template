@@ -1,0 +1,51 @@
+// 主题的初始数值，例如 #app 想固定统一变成蓝色
+// 这里的 css 将会被污染及覆盖
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  -webkit-user-select: none;
+}
+
+html,
+body .app {
+  color: #333333;
+  font-family: Arial, Helvetica, 'STHeiti STXihei', 'Microsoft YaHei', Tohoma, sans-serif;
+  background-color: $color-bg;
+}
+
+#app {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  min-height: 100vh;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+
+  // https://www.zhangxinxu.com/wordpress/2018/10/scroll-behavior-scrollintoview-平滑滚动/
+  scroll-behavior: smooth;
+}
+
+.app-container {
+  padding-bottom: 50px;
+}
+
+.bottom-block {
+  height: 60px;
+}
+
+/** 解决路由切换动画上下闪动问题 */
+.router {
+  width: 100%;
+  backface-visibility: hidden;
+  min-height: 100vh;
+}

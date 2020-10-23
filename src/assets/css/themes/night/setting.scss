@@ -1,0 +1,24 @@
+// 主题名称
+$theme-name: 'night';
+// 主题背景颜色
+$theme-bg-color: #12151c;
+// 主题菜单背景颜色
+$theme-bg-menu-color: #2b3036;
+// 主题容器背景颜色
+$theme-bg-container-color: #2b3036;
+// 主题背景图片遮罩
+$theme-bg-mask: rgba(#000, 0);
+// 字体颜色
+$theme-text-color: #b2b2b2;
+$theme-text-active-color: #f0ba07;
+
+// 消息提示
+$theme-message-info-background-color: $color-bg;
+$theme-message-info-text-color: $color-text-normal;
+$theme-message-info-border-color: $color-border-1;
+
+// container组件
+$theme-container-background-color: rgba(#FFF, 1);
+$theme-container-header-footer-background-color: #FFF;
+$theme-container-border-inner: 1px solid #cfd7e5;
+$theme-container-border-outer: 1px solid #cfd7e5;
