@@ -26,6 +26,8 @@
     }
 
     &__left {
+      opacity: 1 !important;
+
       i {
         color: $theme-text-active-color;
       }
@@ -35,6 +37,8 @@
     }
 
     &__right {
+      opacity: 1 !important;
+
       i {
         color: $theme-text-active-color;
       }
@@ -42,7 +46,6 @@
         color: $theme-text-color;
       }
     }
-
   }
 
   // tabbar
@@ -141,7 +144,7 @@
     }
 
     .van-cell--clickable {
-      background-color: $theme-bg-container-color;      
+      background-color: $theme-bg-container-color;
     }
   }
 
