@@ -18,6 +18,7 @@ vv-h5-template
 # [完成] 语言包设定: 详细情况，查看 page2
 # [部分完成] 主题风格：白天模式 Day Mode，夜间模式 Dark Mode
 
+# vuex-store 里面的 locale-i18n 没有固定，需要set 进去 db
 # header title
 # router 里面，login的判断
 # axios 二次封装
